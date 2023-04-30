@@ -31,4 +31,10 @@ public class PersegiPanjang {
     }
     
     
+    public void showTampil(){
+        System.out.println("Panjang PersegiPanjang : " + panjang);
+        System.out.println("Lebar   PersegiPanjang : " + lebar);
+    }
+    
+    
 }
