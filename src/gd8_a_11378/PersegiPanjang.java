@@ -4,10 +4,31 @@
  */
 package gd8_a_11378;
 
+import exception.InputNegativeException;
+import exception.InvalidPanjangLebarException;
+
 /**
  *
  * @author ASUS
  */
 public class PersegiPanjang {
+    private double panjang, lebar;
+
+    public PersegiPanjang(double panjang, double lebar) throws InputNegativeException,
+            InvalidPanjangLebarException{
+        
+        if (panjang < 0 || lebar < 0) {
+            throw new InputNegativeException();
+        }else if(panjang == 0 || lebar == 0){
+            throw new InvalidPanjangLebarException();
+        }else{
+            this.panjang = panjang;
+            this.lebar = lebar;
+        }
+        
+        
+        
+    }
+    
     
 }

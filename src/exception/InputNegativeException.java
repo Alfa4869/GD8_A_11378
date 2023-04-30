@@ -8,6 +8,10 @@ package exception;
  *
  * @author ASUS
  */
-public class InputNegativeException {
+public class InputNegativeException extends Exception{
+    
+    public void showMessage(){
+            System.out.println("Panjang atau lebar Tidak boleh < 0");
+    }
     
 }

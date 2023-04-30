@@ -8,6 +8,8 @@ package exception;
  *
  * @author ASUS
  */
-public class InvalidPanjangLebarException {
-    
+public class InvalidPanjangLebarException extends Exception{
+    public void showMessage(){
+            System.out.println("Panjang atau lebar Tidak boleh == 0");
+    }
 }
