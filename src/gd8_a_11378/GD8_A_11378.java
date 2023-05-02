@@ -8,6 +8,11 @@ package gd8_a_11378;
 import exception.InputNegativeException;
 import exception.InvalidPanjangLebarException;
 
+import exception.NameException;
+import exception.KodeException;
+import exception.NomorPegawaiException;
+import exception.NomorTeleponException;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 /**
@@ -22,6 +27,8 @@ public class GD8_A_11378 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        /*
         double panjang , lebar;
         
         try{
@@ -43,6 +50,41 @@ public class GD8_A_11378 {
         finally{
             System.out.println("code ini ada di finnaly");
         }
+        */
+        
+        String nama,nomor, kode, noTelp;
+        
+        try{
+            System.out.println("Masukan nama : "); nama = br.readLine();
+            System.out.println("Masukan Nomor Pegawai CS : "); nomor = br.readLine();
+            System.out.println("Masukan Kode CS : "); kode = br.readLine();
+            System.out.println("Masukan noTelo  : "); noTelp = br.readLine();
+            
+            CustomerService CS = new CustomerService(nama,noTelp,nomor,kode);
+            CS.showData();
+            
+            
+            
+        }
+        catch(NameException e1){
+            e1.showMessage();
+        }
+        catch(NomorTeleponException e2){
+            e2.showMessage();
+        }
+        catch(NomorPegawaiException e2){
+            e2.showMessage();
+        }
+        catch(KodeException e2){
+            e2.showMessage();
+        }
+        catch(Exception e){
+            System.out.println("masuk sini");
+        }
+        finally{
+            System.out.println("code ini ada di finnaly");
+        }
+
     }
     
 }
