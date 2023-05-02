@@ -11,7 +11,11 @@ package exception;
 public class NomorPegawaiException extends Exception{
     
     
-    public void showMessage(){
-        
+    public void showMessageCS(){
+        System.out.println(" [!] Nomor Pegawai Customer Service Harus Antara 3-5 Digit [!] ");
     }
+    public void showMessageAD(){
+        System.out.println(" [!] Nomor Pegawai Customer Service Harus Antara 6-8 Digit [!] ");
+    }
+    
 }

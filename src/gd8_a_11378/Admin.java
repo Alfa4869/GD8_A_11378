@@ -28,8 +28,13 @@ public class Admin extends Pegawai{
         }
     }
     
+    @Override
     public void showData(){
-        
+        System.out.println("===== CUSTOMER SERVICE ======");
+        System.out.println("NAMA            : " + nama);
+        System.out.println("KODE Admin      : " + kodeAdmin);
+        System.out.println("Nomor Pegawai   : " + nomorPegawaiAdmin);
+        System.out.println("Nomor Telp      : " + noTelp);
     }
     
 }

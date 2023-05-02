@@ -32,7 +32,12 @@ public class CustomerService extends Pegawai{
         }
     }
     
+    @Override
     public void showData(){
-        
+        System.out.println("===== CUSTOMER SERVICE ======");
+        System.out.println("NAMA            : " + nama);
+        System.out.println("KODE CS         : " + kodeCS);
+        System.out.println("Nomor Pegawai   : " + nomorPegawaiCS);
+        System.out.println("Nomor Telp      : " + noTelp);
     }
 }

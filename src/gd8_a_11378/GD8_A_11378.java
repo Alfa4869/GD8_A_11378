@@ -54,36 +54,89 @@ public class GD8_A_11378 {
         
         String nama,nomor, kode, noTelp;
         
-        try{
-            System.out.println("Masukan nama : "); nama = br.readLine();
-            System.out.println("Masukan Nomor Pegawai CS : "); nomor = br.readLine();
-            System.out.println("Masukan Kode CS : "); kode = br.readLine();
-            System.out.println("Masukan noTelo  : "); noTelp = br.readLine();
+        
+        // CUSTOMER SERVICE
+        while(true){
+            try{
+                System.out.println("Masukan nama : "); nama = br.readLine();
+                System.out.println("Masukan Nomor Pegawai CS : "); nomor = br.readLine();
+                System.out.println("Masukan Kode CS : "); kode = br.readLine();
+                System.out.println("Masukan noTelp  : "); noTelp = br.readLine();
+
+
+
+                CustomerService CS = new CustomerService(nomor,kode,nama,noTelp);
+                CS.showData();
+
+
+
+            }
+            catch(NameException e1){
+                e1.showMessage();
+                continue;
+            }
+            catch(NomorTeleponException e2){
+                e2.showMessage();
+                continue;
+            }
+            catch(NomorPegawaiException e2){
+                e2.showMessageCS();
+                continue;
+            }
+            catch(KodeException e2){
+                e2.showMessageCS();
+                continue;
+            }
+            catch(Exception e){
+                System.out.println("Kesalahan pada Buffered Reader");
+                continue;
+            }
+            break;
             
-            CustomerService CS = new CustomerService(nama,noTelp,nomor,kode);
-            CS.showData();
-            
-            
-            
         }
-        catch(NameException e1){
-            e1.showMessage();
+        
+        
+        
+        //ADMIN
+        while(true){
+            try{
+                System.out.println("Masukan nama : "); nama = br.readLine();
+                System.out.println("Masukan Nomor Pegawai CS : "); nomor = br.readLine();
+                System.out.println("Masukan Kode ADMIN : "); kode = br.readLine();
+                System.out.println("Masukan noTelp  : "); noTelp = br.readLine();
+
+
+
+                Admin ad = new Admin(nomor,kode,nama,noTelp);
+                ad.showData();
+
+
+
+            }
+            catch(NameException e1){
+                e1.showMessage();
+                continue;
+            }
+            catch(NomorTeleponException e2){
+                e2.showMessage();
+                continue;
+            }
+            catch(NomorPegawaiException e2){
+                e2.showMessageAD();
+                continue;
+            }
+            catch(KodeException e2){
+                e2.showMessageAD();
+                continue;
+            }
+            catch(Exception e){
+                System.out.println("Kesalahan pada Buffered Reader");
+                continue;
+            }
+            break;
         }
-        catch(NomorTeleponException e2){
-            e2.showMessage();
-        }
-        catch(NomorPegawaiException e2){
-            e2.showMessage();
-        }
-        catch(KodeException e2){
-            e2.showMessage();
-        }
-        catch(Exception e){
-            System.out.println("masuk sini");
-        }
-        finally{
-            System.out.println("code ini ada di finnaly");
-        }
+        
+        
 
     }
     

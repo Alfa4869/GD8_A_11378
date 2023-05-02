@@ -11,7 +11,11 @@ package exception;
 public class KodeException extends Exception{
     
     
-    public void showMessage(){
-        
+    public void showMessageCS(){
+        System.out.println(" [!] Kode Customer Service Harus ada unsur 'CS-' [!]");
+    }
+    
+    public void showMessageAD(){
+        System.out.println(" [!] Kode Customer Service Harus ada unsur 'ADM-' [!]");
     }
 }
